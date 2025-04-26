@@ -16,8 +16,8 @@ const App = () => {
     }
   }
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gray-100">
-      <div className="bg-white p-5 rounded-2xl text-center w-[500px] h-[500px]  flex flex-col justify-center items-center shadow">
+    <div className="h-screen flex flex-col justify-center items-center bg-gray-100 px-[16px]">
+      <div className="bg-white p-5 rounded-2xl text-center md:w-[500px] md:h-[500px]  flex flex-col justify-center items-center shadow">
         <h1 className="text-2xl font-bold mb-4">Idk what this is</h1>
         <div>
           <input
