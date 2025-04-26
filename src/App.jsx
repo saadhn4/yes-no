@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [img, setImg] = useState();
@@ -17,6 +19,7 @@ const App = () => {
   }
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-gray-100 px-[16px]">
+      <ToastContainer />
       <div className="bg-white p-5 rounded-2xl text-center md:w-[500px] md:h-[500px]  flex flex-col justify-center items-center shadow">
         <h1 className="text-2xl font-bold mb-4">Idk what this is</h1>
         <div>
@@ -33,6 +36,10 @@ const App = () => {
           <button
             className="text-white bg-red-500 font-bold p-2 mt-3 rounded-xl cursor-pointer"
             onClick={() => {
+              if (!input) {
+                toast.error("Well you gotta ask something..");
+                return;
+              }
               getImg();
               setClicked(true);
             }}
