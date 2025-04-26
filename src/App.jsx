@@ -31,7 +31,7 @@ const App = () => {
             }}
           />
           <button
-            className="text-white bg-red-500 font-bold p-2 rounded-xl cursor-pointer"
+            className="text-white bg-red-500 font-bold p-2 mt-3 rounded-xl cursor-pointer"
             onClick={() => {
               getImg();
               setClicked(true);
